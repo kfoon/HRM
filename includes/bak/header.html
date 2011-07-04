@@ -1,0 +1,502 @@
+<?php # Script 2.2 - header.html
+
+// This page begins the HTML header for the site.
+
+// Check for a $page_title value:
+if (!isset($page_title)) $page_title = 'Default Page Title';
+?>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title><?php echo $page_title; ?></title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+
+        <link rel="stylesheet" type="text/css" href="./includes/css/styles.css" />
+        <link rel="stylesheet" type="text/css" href="./includes/css/jquery.mcdropdown.css" />
+        <script language="JavaScript" src="./includes/js/jquery-1.3.2.min.js"></script>
+        <script language="JavaScript" src="./includes/js/jquery.corner.js"></script>
+        <script language="JavaScript" src="./includes/js/AjaxFlagMenu-1.0.2.min.js"></script>
+	<script type="text/javascript" src="./includes/js/jquery.mcdropdown.min.js"></script>
+
+        
+
+
+
+
+<script language="JavaScript">
+	
+	$(document).ready(function(){
+		
+		var Menu = $("#_Menu").AjaxFlagMenu({
+			Caption:'Menu',
+			CaptionClass:'CaptionClass',
+			onOutClass:'onOutClass',
+			onOverClass:'onOverClass',
+			onClickClass:'onClickClass',
+			hscOutClass:'hscOutClass',
+			hscClickClass:'hscClickClass',
+			Loading_gif:'src/Loading.gif',
+			ajaxContent:'ajaxContent'
+		});
+	//Comentaire
+	var Commentaire = Menu.add({
+		Title:'Comments',
+		onOutIcon:'src/com_d.png',
+		onClickIcon:'src/com_c.png',
+		HtmlSatusContent:'10',
+		url:'pages/profile_details.php',
+		data:''
+	});
+	Commentaire.sethscCorner();
+	//Evenement
+	Menu.add({
+		Title:'Evenement',
+		onOutIcon:'src/event_d.png',
+		onClickIcon:'src/event_c.png',
+		HtmlSatusContent:'',
+		url:'pages/evenement.php',
+		data:''
+	});
+	//Lien
+	Menu.add({
+		Title:'Lien',
+		onOutIcon:'src/link_d.png',
+		onClickIcon:'src/link_c.png',
+		HtmlSatusContent:'',
+		url:'pages/lien.php',
+		data:''
+	});
+	//Aide
+	Menu.add({
+		Title:'Aide',
+		onOutIcon:'src/help_d.png',
+		onClickIcon:'src/help_c.png',
+		HtmlSatusContent:'',
+		url:'pages/comming.php',
+		data:''
+	});
+	
+	$("#_td").corner("4px");
+	
+	});
+	
+	<!--//
+	// on DOM ready
+	$(document).ready(function (){
+		$("#current_rev").html("v"+$.mcDropdown.version);
+		$("#category").mcDropdown("#categorymenu");
+	});
+	//-->
+
+</script>
+
+	
+</script>
+
+
+
+</head>
+
+<body>
+
+<div id="container">
+<div id="bg_back">
+
+
+</div>
+
+		<div id="menu">
+
+			<ul>
+                       
+<!--// start example code //-->
+			
+				<input type="text" name="category" id="category" value="" />
+			
+			
+
+
+			<ul id="categorymenu" class="mcdropdown_menu" >
+				<li rel="1">
+					<a href="index.php?p=employee_information">Admin</a>
+					<ul>
+						<li rel="2">
+					<a href="index.php?p=info">Company Info</a>
+							<ul>
+								<li rel="3">
+					<a href="index.php?p=general">General</a>
+								</li>
+
+								<li rel="4">
+					<a href="index.php?p=locations">Locations</a>
+								</li>
+
+
+								<li rel="5">
+					<a href="index.php?p=property">Company Property</a>
+								</li>
+
+								<li rel="6">
+					<a href="index.php?p=company-structure">Company Structure</a>							
+							</ul>
+						</li>
+
+
+                                  
+
+                                        <li rel="3">
+					
+					
+					<a href="index.php?p=personal_details">Job</a>
+							<ul>
+								<li rel="1">
+					<a href="index.php?p=job-specifications">Job Specifications</a>
+								</li>
+
+								<li rel="2">
+					<a href="index.php?p=pay-grades">Pay Grades</a>
+								</li>
+
+
+								<li rel="3">
+					<a href="index.php?p=employment-status">Employment Status</a>
+								</li>
+
+								<li rel="4">
+					<a href="index.php?p=job-categories">EEO Job Categories</a>							
+                                                 </li>
+							</ul>
+						</li>
+
+
+
+                                        <li rel="4">
+					
+					
+					<a href="index.php?p=job">Qualifications</a>
+							<ul>
+								<li rel="1">
+					<a href="index.php?p=job-specifications">Education</a>
+								</li>
+
+								<li rel=2">
+					<a href="index.php?p=pay-grades">License</a>
+								</li>
+
+
+								<li rel="3">
+					<a href="index.php?p=employment-status">Fluency</a>
+								</li>
+
+							
+							</ul>
+						</li>
+
+                                        <li rel="5">
+					
+					
+					<a href="index.php?p=skills">Skills</a>
+							<ul>
+								<li rel="1">
+					<a href="index.php?p=job-specifications">Skills</a>
+								</li>
+
+								<li rel=2">
+					<a href="index.php?p=pay-grades">Languages</a>
+								</li>
+
+
+								<li rel="3">
+					<a href="index.php?p=employment-status">Fluency</a>
+								</li>
+
+							
+							</ul>
+						</li>
+
+
+                                        <li rel="6">
+					
+					
+					<a href="index.php?p=skills">Nationality and Race</a>
+							<ul>
+								<li rel="1">
+					<a href="index.php?p=job-specifications">Nationality</a>
+								</li>
+
+								<li rel=2">
+					<a href="index.php?p=pay-grades">Ethnic Races</a>
+								</li>
+
+							
+							</ul>
+						</li>
+
+
+                                        <li rel="7">
+					
+					
+					<a href="index.php?p=skills">Users</a>
+							<ul>
+								<li rel="1">
+					<a href="index.php?p=job-specifications">HR Admin Users</a>
+								</li>
+
+								<li rel=2">
+					<a href="index.php?p=pay-grades">ESS Users</a>
+								</li>
+
+								<li rel=3">
+					<a href="index.php?p=pay-grades">Admin User Groups</a>
+								</li>
+
+							
+							</ul>
+						</li>
+
+								<li rel=8">
+					<a href="index.php?p=policies">HR Policies</a>
+								</li>
+
+								<li rel=9">
+					<a href="index.php?p=notifications">Notifications</a>
+								</li>
+
+								<li rel=10">
+					<a href="index.php?p=news">Bullettins and News</a>
+								</li>
+                                        </ul>
+
+
+                                      <li rel="12">
+					<a href="index.php?p=admin">PIM</a>
+					<ul>
+						<li rel="2">
+					<a href="index.php?p=info">Employee List</a>
+							
+								<li rel="3">
+					<a href="index.php?p=general">Add Employee</a>
+								</li>
+
+				      </ul>
+
+                                      <li rel="13">
+					<a href="index.php?p=admin">Leave</a>
+					<ul>
+						<li rel="2">
+					<a href="index.php?p=info">Leave Summary</a>
+							<ul>
+								<li rel="3">
+					<a href="index.php?p=general">Employment Leave Summary</a>
+					</li>
+							
+					</ul>
+						
+
+                                      <li rel="14">
+					<a href="index.php?p=admin">Define Days Off</a>
+					<ul>
+						<li rel="2">
+					<a href="index.php?p=info">Days Off</a>
+							
+								<li rel="3">
+					<a href="index.php?p=general">Specific Holidays</a>
+								</li>
+							
+							</ul>
+						</li>
+								<li rel="15">
+					<a href="index.php?p=general">Define Leave Type</a>
+								</li>
+
+								<li rel="16">
+					<a href="index.php?p=general">Assign Leave</a>
+								</li>
+
+
+								<li rel="17">
+					<a href="index.php?p=general">Leave List</a>
+								</li>
+
+								<li rel="18">
+					<a href="index.php?p=general">Leave Calender</a>
+								</li>
+                                                                </ul>
+                                      <li rel="19">
+					<a href="index.php?p=admin">Time</a>
+					<ul>
+						<li rel="2">
+					<a href="index.php?p=info">Timesheets</a>
+							<ul>
+					        <li rel="3">
+					<a href="index.php?p=general">Print Timesheets</a>
+					        <li rel="4">
+					<a href="index.php?p=general">Employee Timesheets</a>
+					</li>
+							
+					</ul>
+                                      <li rel="20">
+					<a href="index.php?p=admin">Attendance</a>
+					<ul>
+						<li rel="2">
+					<a href="index.php?p=info">Employee Reports</a>
+							
+					        <li rel="3">
+					<a href="index.php?p=general">Configuration</a>
+							
+					
+					</li>
+							
+					</ul>
+
+                                        <li rel="21">
+					<a href="index.php?p=admin">Employee Reports</a>
+					</li>
+
+                                        <li rel="22">
+					<a href="index.php?p=admin">Project Reports</a>
+					</li>
+
+                                        <li rel="23">
+					<a href="index.php?p=admin">Work Shifts</a>
+					</li></ul>
+
+                                        <li rel="24">
+					<a href="index.php?p=admin">Benefits</a>
+					<ul>
+						<li rel="2">
+					<a href="index.php?p=info">Health Saving Plan</a>
+							<ul>
+					        <li rel="3">
+					<a href="index.php?p=general">Define HSP</a>
+					        <li rel="4">
+					<a href="index.php?p=general">Employee HSP Summary</a>
+					        <li rel="5">
+					<a href="index.php?p=general">HSP Payment DUE</a>
+					        <li rel="6">
+					<a href="index.php?p=general">HSP Expenditure</a>
+					        <li rel="7">
+					<a href="index.php?p=general">HSP Used</a>
+					</li>
+							
+					</ul>
+
+                                       <li rel="25">
+					<a href="index.php?p=admin">PayRoll Schedule</a>
+					<ul>
+						<li rel="2">
+					<a href="index.php?p=info">View Payroll Schedule</a>
+							
+					        <li rel="3">
+					<a href="index.php?p=general">Add Pay Period</a></ul>
+					
+					</li>
+							
+					</ul>
+
+                                        <li rel="26">
+					<a href="index.php?p=admin">Recruitment</a>
+					<ul>
+						<li rel="2">
+					<a href="index.php?p=info">Job Vacancies</a>
+							
+					        <li rel="3">
+					<a href="index.php?p=general">Applicants</a>
+					
+					</li>
+							
+					</ul>
+
+                                        <li rel="27">
+					<a href="index.php?p=admin">Training</a>
+					<ul>
+						<li rel="2">
+					<a href="index.php?p=info">Training List</a>
+
+					
+					</li>
+							
+					</ul>
+
+
+                                        <li rel="28">
+					<a href="index.php?p=admin">Budget</a>
+					<ul>
+						<li rel="2">
+					<a href="index.php?p=info">Budget List</a>
+						<li rel="3">
+					<a href="index.php?p=info">Configure Budget</a>
+
+					
+					</li>
+							
+					</ul>
+
+                                        <li rel="29">
+					<a href="index.php?p=admin">Reports</a>
+					<ul>
+						<li rel="2">
+					<a href="index.php?p=info">View Reports</a>
+						<li rel="3">
+					<a href="index.php?p=info">Add Reports</a>
+
+					
+					</li>
+							
+					</ul>
+                                        <li rel="30">
+					<a href="index.php?p=admin">Help</a>
+					<ul>
+						<li rel="2">
+					<a href="index.php?p=info">Support</a>
+						<li rel="3">
+					<a href="index.php?p=info">Blog</a></li>
+
+			</ul>
+
+			<!--// end example code //-->
+
+			</ul>
+		</div>
+	<div id="content">
+			<div id="sidebar">
+			
+
+                       		<img height="30" width="103" name=""  src="images/fb.png">
+                       
+                       
+<br>
+<div id="pimleftmenu">
+    <div id="currentImage" style="width: 141px; height: auto; overflow: hidden;">
+    <center>
+        <a href="index.php?p=upload_photo">
+            <img height="113" width="150" border="0" visibility="visible" value="'+aData[9]+'" alt="Employee Photo" src="" id="empPic" style="width: 100%;">
+        </a>
+        <span class="smallHelpText"><strong>modou s kebbeh</strong></span>
+    </center> 
+    
+
+
+</div>
+    <tr style="padding:50%">
+ 
+    <td id="_td" width="50%" style="border:2px solid #3B59B6 ; padding:10px;"><div style="width:150px;" id="_Menu"></div></td>
+  </tr>
+  <tr>
+    <td colspan="2"><div id="ajaxContent"></div></td>
+  </tr>
+
+</div>
+
+
+
+
+
+
+			</div>
+
+
+
+
+		
